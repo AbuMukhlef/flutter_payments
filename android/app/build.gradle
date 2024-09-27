@@ -9,6 +9,10 @@ android {
     namespace = "com.example.flutter_payments"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
+    defaultConfig {
+        minSdkVersion 21
+    }
+
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

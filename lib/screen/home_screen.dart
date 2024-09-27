@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:pay/pay.dart';
+import 'package:flutter_payments/screen/pay.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       // backgroundColor: Colors.red,
       body: Center(
-        child: Text('Hello World!',
-            style: TextStyle(fontSize: 24, color: Colors.red)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const FlutterLogo(size: 100),
+            ElevatedButton(
+                onPressed: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PaymentMethods())),
+                child: const Text("Pay")),
+          ],
+        ),
       ),
     );
   }
